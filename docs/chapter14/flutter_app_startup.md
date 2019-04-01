@@ -106,7 +106,7 @@ void attachRootWidget(Widget rootWidget) {
 }
 ```
 
-注意，代码中的有`renderView`和`renderViewElement`两个变量，`renderView`是一个RenderObject，它是渲染树的根，而`renderViewElement`是`renderView`对应的Element对象，可见该方法主要完成了 根Widget 到根 RenderObject再到更Element的整个关联过程。我们看看`attachToRenderTree`的源码实现：
+注意，代码中的有`renderView`和`renderViewElement`两个变量，`renderView`是一个RenderObject，它是渲染树的根，而`renderViewElement`是`renderView`对应的Element对象，可见该方法主要完成了 根Widget 到根 RenderObject再到根Element的整个关联过程。我们看看`attachToRenderTree`的源码实现：
 
 ```dart
 RenderObjectToWidgetElement<T> attachToRenderTree(BuildOwner owner, [RenderObjectToWidgetElement<T> element]) {
